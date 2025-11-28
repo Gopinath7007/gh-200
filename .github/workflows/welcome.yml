@@ -8,7 +8,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome new contributors
+      - name: Welcome new contributors new
         uses: actions/first-interaction@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
