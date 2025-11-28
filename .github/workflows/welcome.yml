@@ -6,5 +6,9 @@ permissions:
   pull-requests: write
 jobs: 
   welcome:
-    name: gopi try
+    name: gopi
     runs-on: ubuntu-latest
+  new:
+    name: newwelcome
+    runs-on: ubuntu-latest
+  
