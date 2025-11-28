@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "welcome-workflow", "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "welcome-workflow" ]
     types: [opened]
 
 permissions:
