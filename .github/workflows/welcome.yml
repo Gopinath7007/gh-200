@@ -1,7 +1,8 @@
 name: Post welcome comment
 on:
-  pull_request:
-    types: [opened]
+  push:
+    branches:
+      - welcome-workflow
 jobs:
   welcome:
     runs-on: ubuntu-latest
