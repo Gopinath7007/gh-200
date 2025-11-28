@@ -4,11 +4,24 @@ on:
     types: [opened]
 permissions:
   pull-requests: write
-jobs: 
+jobs:
   welcome:
-    name: gopi
     runs-on: ubuntu-latest
+    steps:
+      - name: Welcome new contributors
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 Thanks for opening your first issue! We appreciate your contribution to this project.
+            Please be patient while we review your issue.
+          pr-message: |
+            👋 Thanks for opening your first pull request! We appreciate your contribution.
+            Please make sure all tests pass and the code follows our guidelines.
+
   new:
-    name: newwelcome
     runs-on: ubuntu-latest
+    steps:
+      - name: Greet new users
+        run: echo "Welcome to genz-brain-games repository!"
   
