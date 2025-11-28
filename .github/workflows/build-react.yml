@@ -1,13 +1,15 @@
-name: Build React App
+name: Build and Deploy React App
 
 on:
   push:
     branches:
-      - welcome-workflow
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,8 +28,8 @@ jobs:
       - name: Build React app
         run: npm run build
       
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: react-build
-          path: dist/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
