@@ -52,4 +52,4 @@ jobs:
     steps:
       - name: Log my work
         run: |
-          echo "::debug::Logging my username and branch from github context: ${{ github.actor }} on ${{ github.ref_name }}"
+          echo "::debug::Logging my username and branch from github context: ${{ github.actor }} on ${{ secrets.GITHUB_TOKEN }}."
