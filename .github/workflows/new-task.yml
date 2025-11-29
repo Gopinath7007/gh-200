@@ -1,0 +1,11 @@
+name: Web Boss CI
+on:
+    push:
+        branches: [ "welcome-workflow" ]
+    pull_request:
+        types: [opened]
+jobs: 
+  build-new:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is the build-new job running on branch ${{ github.ref }} by user ${{ github.actor }}."

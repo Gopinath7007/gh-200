@@ -1,13 +1,13 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and deploy to GitHub Pages
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# For more information  see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
 
 on:
   push:
-    branches: [ "welcome-workflow", "main" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "welcome-workflow" ]
+    # branches: [ "welcome-workflow" ]
     types: [opened]
 
 permissions:
@@ -51,4 +51,13 @@ jobs:
 
     steps:
       - name: Log my work
-        run: echo "This is my log of work for the day!" 
+        run: |
+          echo "::debug::Logging my username and branch from github context: ${{ github.actor }} on ${{ secrets.GITHUB_TOKEN }}."
+
+  mynewtask: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: My New Task - boss
+        run: |
+          echo "This is my new task running on branch ${{ github.ref }} by user ${{ github.actor }}."           
