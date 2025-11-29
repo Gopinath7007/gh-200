@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "welcome-workflow", "main" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "welcome-workflow" ]
+    # branches: [ "welcome-workflow" ]
     types: [opened]
 
 permissions:
