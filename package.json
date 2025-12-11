@@ -4,7 +4,7 @@
   "description": "Next.js app with Home and Privacy pages",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
